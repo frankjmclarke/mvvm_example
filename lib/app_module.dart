@@ -1,14 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:injectable/injectable.dart';
-import 'package:mvvm_example/user_view_model.dart';
-
-import 'User.dart';
+import 'user.dart';
+import 'user_view_model.dart';
 
 @module
 abstract class AppModule {
   @lazySingleton
   UserRepository get userRepository => UserRepository();
 
-  @factory
-  UserViewModel get userViewModel => UserViewModel(userRepository);
+ //@factory
+  //UserViewModel get userViewModel => UserViewModel(userRepository);
 }

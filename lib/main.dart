@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mvvm_example/user_screen.dart';
-import 'package:mvvm_example/user_view_model.dart';
+import 'user_screen.dart';
+import 'user_view_model.dart';
 import 'package:provider/provider.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
-import 'injectable.dart';
+import 'injectable_me.dart';
 
 
 void main() {

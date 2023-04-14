@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:injectable/injectable.dart';
 
-import 'User.dart';
+import 'user.dart';
 
 @injectable
 class UserViewModel extends ChangeNotifier {

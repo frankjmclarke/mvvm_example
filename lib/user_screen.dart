@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:mvvm_example/user_view_model.dart';
+import 'user_view_model.dart';
 import 'package:provider/provider.dart';
 
 class UserScreen extends StatelessWidget {
@@ -8,7 +7,7 @@ class UserScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("User Profile"),
+        title: const Text("User Profile"),
       ),
       body: Center(
         child: Column(
@@ -21,22 +20,22 @@ class UserScreen extends StatelessWidget {
                   return Column(
                     children: [
                       Text(user.name),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Text(user.age.toString()),
                     ],
                   );
                 } else {
-                  return CircularProgressIndicator();
+                  return const CircularProgressIndicator();
                 }
               },
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 Provider.of<UserViewModel>(context, listen: false)
                     .fetchUser();
               },
-              child: Text("Fetch User"),
+              child: const Text("Fetch User"),
             ),
           ],
         ),
